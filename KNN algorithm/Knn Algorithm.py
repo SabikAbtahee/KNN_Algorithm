@@ -13,7 +13,7 @@ class distanceClass:
         return str(self.classCount)+" : "+str(self.distance)
     
 def readData():
-    dataframe = pd.read_csv("wine.csv") ##glass.csv , wine.csv ,  iris.csv
+    dataframe = pd.read_csv("wine.csv") ##glass.csv , wine.csv ,  iris.csv  ################ READ FILE HERE
     return dataframe
 
 def iterateRows(dataframe):
@@ -89,9 +89,9 @@ def CalculateAccuracy(matches,total):
     print("\n\nACCURACY is {}%".format(accuracy))
 def main():
     matches=[]
-    k=3
-    testRun=10
-    splitSize=0.05
+    k=3                         ##################################### NUMBER OF K always make it odd
+    testRun=10                  ##################################### How many times it will do the same thing to find average
+    splitSize=0.05              ##################################### Split for training dataset and test dataset
     dataframe=readData()
     for i in range(testRun):
         #print (i)
